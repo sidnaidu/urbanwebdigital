@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UrbanWeb Digital — Premium Websites That Convert</title>
+  <meta name="description" content="Premium, lead-focused websites for SMBs. Designed, built, and launched fast — without agency-level pricing." />
+  <meta name="theme-color" content="#0c0c0f" />
+    <link rel="icon" type="image/png" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0c0c0f;
+  --bg2:#07070a;
+  --panel:rgba(255,255,255,.05);
+  --panel2:rgba(0,0,0,.30);
+  --line:rgba(255,255,255,.12);
+  --text:#f5f5f5;
+  --muted:rgba(255,255,255,.68);
+  --muted2:rgba(255,255,255,.52);
+  --gold:#c6a46c;
+  --goldSoft:#e2c79a;
+  --shadow: 0 30px 90px rgba(0,0,0,.55);
+  --shadow2: 0 18px 55px rgba(0,0,0,.40);
+  --r:18px;
+  --r2:26px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(900px 520px at 30% 10%, rgba(198,164,108,.14), transparent 60%),
+              radial-gradient(900px 520px at 70% 0%, rgba(255,255,255,.05), transparent 60%),
+              linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  color:var(--text);
+}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:14px 26px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(8px);
+  cursor:pointer;
+  transition:.25s ease;
+  white-space:nowrap;
+}
+.btn:hover{transform: translateY(-2px)}
+.btn.gold{
+  border-color:rgba(198,164,108,.42);
+  background: linear-gradient(135deg, rgba(198,164,108,.22), rgba(255,255,255,.05));
+}
+.pill{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(198,164,108,.26);
+  background: rgba(198,164,108,.10);
+  color: rgba(255,255,255,.78);
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.pill i{
+  width:6px;height:6px;border-radius:50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 7px rgba(198,164,108,.14);
+  display:inline-block;
+}
+.h-serif{
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  letter-spacing:-.02em;
+}
+.goldText{
+  background: linear-gradient(90deg, var(--goldSoft), var(--gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-logo{
+  width:min(560px, 78vw);
+  height:auto;
+  margin: 0 auto 18px;
+  display:block;
+  opacity:.96;
+  filter: drop-shadow(0 22px 60px rgba(0,0,0,.60));
+}
+.card{
+  border-radius: var(--r2);
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.20);
+  box-shadow: var(--shadow2);
+}
+.section{padding:64px 0}
+.kicker{
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color: rgba(255,255,255,.62);
+}
+.h2{
+  margin:14px 0 0;
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  font-size: clamp(26px, 3vw, 40px);
+  letter-spacing:-.02em;
+}
+.sub{
+  margin:14px 0 0;
+  color: var(--muted);
+  line-height:1.8;
+  max-width: 70ch;
+}
+.grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+.grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+@media (max-width: 980px){
+  .grid3{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+}
+
+.nav{
+  position:sticky; top:0; z-index:60;
+  background: rgba(12,12,15,.70);
+  backdrop-filter: blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 0}
+.brand{display:flex; align-items:center; gap:12px}
+.brand-mark{
+  width:44px; height:44px;
+  border-radius:14px;
+  display:block;
+  object-fit:contain;
+  filter: drop-shadow(0 16px 32px rgba(198,164,108,.18));
+}
+.brand-text{
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color: rgba(255,255,255,.70);
+}
+.brand-accent{color: rgba(226,199,154,.92)}
+.links{
+  display:flex; gap:18px; align-items:center;
+  font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+  color: rgba(255,255,255,.58);
+}
+.links a{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid transparent;
+  transition:.2s ease;
+}
+.links a:hover{border-color: rgba(198,164,108,.20); background: rgba(198,164,108,.08); color: rgba(255,255,255,.82)}
+.links a.on{color: rgba(255,255,255,.86); border-color: rgba(198,164,108,.22); background: rgba(198,164,108,.08)}
+.nav-cta{display:flex; gap:12px; align-items:center}
+@media (max-width: 980px){
+  .links{display:none}
+  .nav-cta .btn{padding:12px 18px}
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height: 92vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute; inset:0; z-index:-2;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.62), rgba(0,0,0,.88)),
+    radial-gradient(circle at 70% 40%, rgba(198,164,108,.26), transparent 52%),
+    radial-gradient(circle at 30% 80%, rgba(198,164,108,.14), transparent 60%),
+    url("assets/img/hero-bg.jpg");
+  background-size:cover;
+  background-position:center;
+  filter: brightness(.68) contrast(1.12);
+  transform: scale(1.02);
+}
+.hero-bg:after{
+  content:"";
+  position:absolute; inset:0; z-index:-1;
+  background:
+    radial-gradient(900px 520px at 50% 30%, rgba(198,164,108,.18), transparent 60%),
+    radial-gradient(700px 420px at 80% 15%, rgba(255,255,255,.08), transparent 55%);
+  mix-blend-mode: screen;
+  opacity:.45;
+}
+.hero-inner{
+  width:100%;
+  padding: 72px 0 44px;
+  text-align:center;
+}
+.hero h1{
+  margin: 20px auto 0;
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  font-size: clamp(44px, 5.2vw, 82px);
+  line-height:1.02;
+  max-width: 980px;
+  letter-spacing:-.02em;
+}
+.hero p{
+  margin: 22px auto 0;
+  max-width: 780px;
+  color: rgba(255,255,255,.70);
+  line-height:1.9;
+  font-size: 17px;
+}
+.hero .cta{margin-top:40px; display:flex; gap:16px; flex-wrap:wrap; justify-content:center}
+.hero .meta{
+  margin-top: 44px;
+  display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
+  color: rgba(255,255,255,.55);
+  font-size:12px;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+}
+.dot{width:4px;height:4px;border-radius:50%; background: rgba(198,164,108,.95); display:inline-block; transform: translateY(-2px); margin:0 10px}
+
+/* DEMOS */
+.demo-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:22px}
+.demo{
+  position:relative;
+  overflow:hidden;
+  border-radius: var(--r2);
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.22);
+  box-shadow: var(--shadow2);
+  min-height: 280px;
+}
+.demo img{width:100%; height:100%; object-fit:cover; display:block; transform: scale(1.03); filter: contrast(1.06) saturate(1.02)}
+.demo:after{content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.78))}
+.demo .cap{position:absolute; left:16px; right:16px; bottom:16px; display:flex; justify-content:space-between; gap:12px; align-items:flex-end}
+.demo .cap b{display:block; font-size:14px; letter-spacing:.02em}
+.demo .cap span{display:block; margin-top:6px; font-size:12px; color: rgba(255,255,255,.72)}
+.badge{
+  border:1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.10);
+  padding:9px 12px;
+  border-radius:999px;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  backdrop-filter: blur(8px);
+}
+
+/* PACKAGES */
+.pack{padding:18px}
+.pack h3{margin:10px 0 0; font-family:"Playfair Display", serif; font-weight:600; letter-spacing:-.01em; font-size:22px}
+.price{margin-top:10px; color: rgba(255,255,255,.72); font-size:12px; letter-spacing:.14em; text-transform:uppercase}
+.list{margin-top:14px; display:grid; gap:10px; padding:0; list-style:none}
+.list li{color: rgba(255,255,255,.74); line-height:1.55; font-size:14px; display:flex; gap:10px; align-items:flex-start}
+.tick{
+  width:22px;height:22px;border-radius:10px;
+  border:1px solid rgba(198,164,108,.34);
+  background: rgba(198,164,108,.14);
+  display:grid; place-items:center;
+  color: rgba(226,199,154,.95);
+  flex:0 0 auto;
+  margin-top:1px;
+  font-weight:700;
+}
+.pack .cta{margin-top:16px; display:flex; gap:12px; flex-wrap:wrap}
+.pack.featured{
+  border-color: rgba(198,164,108,.28);
+  background: linear-gradient(180deg, rgba(198,164,108,.10), rgba(0,0,0,.22));
+  box-shadow: 0 28px 90px rgba(198,164,108,.10), var(--shadow2);
+}
+
+/* QUOTES + FAQ */
+.quote{padding:18px}
+.stars{color: rgba(226,199,154,.95); letter-spacing:2px; font-size:12px}
+.quote p{margin:12px 0 0; color: rgba(255,255,255,.80); line-height:1.8}
+.who{margin-top:12px; color: rgba(255,255,255,.58); font-size:12px}
+details{padding:16px; border-radius: var(--r2); border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.20); box-shadow: var(--shadow2)}
+details+details{margin-top:12px}
+summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:12px; align-items:center; color: rgba(255,255,255,.84)}
+summary::-webkit-details-marker{display:none}
+.plus{width:34px;height:34px;border-radius:12px;border:1px solid rgba(198,164,108,.34); background: rgba(198,164,108,.12); display:grid; place-items:center; color: rgba(226,199,154,.95); font-weight:700}
+details p{margin:10px 0 0; color: rgba(255,255,255,.70); line-height:1.8}
+
+/* CONTACT */
+.contact{padding:18px; position:relative; overflow:hidden}
+.contact .bg{
+  position:absolute; inset:0; z-index:-2;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.90)),
+    radial-gradient(circle at 70% 30%, rgba(198,164,108,.20), transparent 55%),
+    url("assets/img/demo-realestate.jpg");
+  background-size:cover;
+  background-position:center;
+  filter: brightness(.70) contrast(1.10);
+  transform: scale(1.02);
+}
+.contact-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:14px}
+label{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color: rgba(255,255,255,.62)}
+input,textarea{
+  width:100%;
+  margin-top:8px;
+  border-radius: 16px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.28);
+  padding: 12px 12px;
+  color: rgba(255,255,255,.90);
+  outline:none;
+  font-family: inherit;
+  transition:.2s ease;
+}
+textarea{min-height:120px; resize:vertical}
+input:focus,textarea:focus{border-color: rgba(198,164,108,.42); box-shadow: 0 0 0 6px rgba(198,164,108,.12)}
+.form{display:grid; gap:12px}
+.note{color: rgba(255,255,255,.60); font-size:12px; line-height:1.6}
+
+/* Sticky WA */
+.wa{
+  position:fixed; right:16px; bottom:16px; z-index:120;
+  display:flex; gap:10px; align-items:center;
+}
+.wa .bubble{
+  display:none;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.30);
+  padding:10px 12px;
+  font-size:12px;
+  color: rgba(255,255,255,.72);
+  box-shadow: var(--shadow2);
+  max-width: 290px;
+}
+.wa a{padding:12px 14px}
+@media (min-width: 920px){ .wa .bubble{display:block} }
+@media (max-width: 980px){
+  .demo-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+footer{padding:28px 0 46px; color: rgba(255,255,255,.55); font-size:12px; border-top:1px solid rgba(255,255,255,.08)}
+.footer-row{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center}
+.footer-links{display:flex; gap:14px; flex-wrap:wrap}
+.footer-links a:hover{color: rgba(226,199,154,.92)}
+</style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="UrbanWeb Digital">
+        <img class="brand-mark" src="assets/img/logo-mark.png" alt="UrbanWeb Digital logo">
+        <span class="brand-text">URBANWEB <span class="brand-accent">DIGITAL</span></span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a class="on" href="index.html#top">Home</a>
+        <a class="" href="index.html#demos">Demos</a>
+        <a class="" href="index.html#packages">Packages</a>
+        <a class="" href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn" href="index.html#demos">View demos</a>
+        <a class="btn gold" id="waTop" href="#">WhatsApp quote</a>
+      </div>
+    </div>
+  </div>
+
+
+<header id="top" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+<div class="pill"> Premium • Fast • Lead-focused</div>
+    <h1>Websites that look <span class="goldText">expensive</span><br/>and bring real <span class="goldText">enquiries</span>.</h1>
+    <p>Premium, lead-focused websites for growing businesses. Designed, built, and launched fast — without agency-level pricing.</p>
+    <div class="cta">
+      <a class="btn gold" id="waHero" href="#">Get a quote</a>
+      <a class="btn" href="#packages">View packages</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="demos">
+  <div class="wrap">
+    <div class="kicker">Demos</div>
+    <div class="h2">Choose a demo. See the quality.</div>
+    <p class="sub">These are niche-ready structures you can sell quickly — builders today, any SMB tomorrow.</p>
+
+    <div class="demo-grid">
+      <a class="demo" href="project.html" aria-label="Real estate project template">
+        <img src="assets/img/demo-salon.jpg" alt="Real estate demo"/>
+        <div class="cap">
+          <div>
+            <b>Real Estate</b>
+            <span>Project page that converts</span>
+          </div>
+          <div class="badge">Open</div>
+        </div>
+      </a>
+
+      <a class="demo" href="demo-clinic.html" aria-label="Clinic demo">
+        <img src="assets/img/demo-clinic.jpg" alt="Clinic demo"/>
+        <div class="cap">
+          <div>
+            <b>Clinic</b>
+            <span>Appointments + trust</span>
+          </div>
+          <div class="badge">Open</div>
+        </div>
+      </a>
+
+      <a class="demo" href="demo-salon.html" aria-label="Salon demo">
+        <img src="assets/img/demo-coaching.jpg" alt="Salon demo"/>
+        <div class="cap">
+          <div>
+            <b>Salon</b>
+            <span>Bookings + offers</span>
+          </div>
+          <div class="badge">Open</div>
+        </div>
+      </a>
+    </div>
+
+    <div style="margin-top:14px" class="grid2">
+      <a class="demo" href="demo-coaching.html" aria-label="Coaching demo" style="min-height:220px">
+        <img src="assets/img/texture-01.jpg" alt="Coaching demo"/>
+        <div class="cap">
+          <div>
+            <b>Coaching</b>
+            <span>Admissions + results</span>
+          </div>
+          <div class="badge">Open</div>
+        </div>
+      </a>
+
+      <div class="card" style="padding:18px; min-height:220px">
+        <div class="kicker">Portfolio stats</div>
+        <div class="h2" style="font-size:30px; margin-top:10px">40+ sites shipped</div>
+        <p class="sub" style="margin-top:10px">12 niche-ready templates • 5–14 day delivery • WhatsApp-first lead flow.</p>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn gold" href="#packages">See packages</a>
+          <a class="btn" id="waDemos" href="#">Get demo links</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="packages">
+  <div class="wrap">
+    <div class="kicker">Packages</div>
+    <div class="h2">Fixed scope. Premium output.</div>
+    <p class="sub">Affordable, not “cheap”. You win because it looks like a big brand — and converts like a landing page.</p>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card pack">
+        <div class="kicker">Launch</div>
+        <h3>Best for most SMBs</h3>
+        <div class="price">from ₹24,999 • 5–7 days</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>Premium 1-page brand site</li>
+          <li><span class="tick">✓</span>WhatsApp + click-to-call CTAs</li>
+          <li><span class="tick">✓</span>Enquiry form + map</li>
+          <li><span class="tick">✓</span>Basic SEO + speed setup</li>
+        </ul>
+        <div class="cta">
+          <a class="btn gold packWA" data-pack="Launch" href="#">Get Launch</a>
+          <a class="btn" href="#demos">View demos</a>
+        </div>
+      </div>
+
+      <div class="card pack featured">
+        <div class="kicker">Growth</div>
+        <h3>For ads + lead generation</h3>
+        <div class="price">from ₹44,999 • 7–10 days</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>Everything in Launch</li>
+          <li><span class="tick">✓</span>1 high-converting landing page</li>
+          <li><span class="tick">✓</span>Copy polish for conversion sections</li>
+          <li><span class="tick">✓</span>Tracking-ready (GA4/Pixel)</li>
+        </ul>
+        <div class="cta">
+          <a class="btn gold packWA" data-pack="Growth" href="#">Get Growth</a>
+          <a class="btn" href="#contact">Talk to us</a>
+        </div>
+      </div>
+
+      <div class="card pack">
+        <div class="kicker">Pro</div>
+        <h3>High-ticket / premium</h3>
+        <div class="price">from ₹64,999 • 10–14 days</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>Everything in Growth</li>
+          <li><span class="tick">✓</span>2–3 campaign landing pages</li>
+          <li><span class="tick">✓</span>Portfolio + testimonials system</li>
+          <li><span class="tick">✓</span>Premium motion & polish</li>
+        </ul>
+        <div class="cta">
+          <a class="btn gold packWA" data-pack="Pro" href="#">Get Pro</a>
+          <a class="btn" href="project.html">Real estate template</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proof">
+  <div class="wrap">
+    <div class="kicker">Proof</div>
+    <div class="h2">Premium feel. Cleaner leads.</div>
+    <p class="sub">Replace these placeholders with real client quotes later — structure stays premium.</p>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card quote">
+        <div class="stars">★★★★★</div>
+        <p>“The site looks like a much bigger brand. WhatsApp enquiries started coming in within the first week.”</p>
+        <div class="who"><b>Founder</b> — Local Services</div>
+      </div>
+      <div class="card quote">
+        <div class="stars">★★★★★</div>
+        <p>“Clean design, fast delivery, and the mobile experience is genuinely premium.”</p>
+        <div class="who"><b>Owner</b> — Clinic</div>
+      </div>
+      <div class="card quote">
+        <div class="stars">★★★★★</div>
+        <p>“The layout is simple and classy. Customers actually read the page and message on WhatsApp.”</p>
+        <div class="who"><b>Marketing</b> — Builder</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <div class="h2">Quick answers. No friction.</div>
+    <p class="sub">This is the part that removes hesitation and helps you close faster.</p>
+
+    <div style="margin-top:22px" class="grid2">
+      <div>
+        <details open>
+          <summary>How fast can you launch? <span class="plus">+</span></summary>
+          <p>Typically 5–14 days depending on how quickly you share content (services, map pin, photos). Fixed scope keeps quality high.</p>
+        </details>
+        <details>
+          <summary>Do you include WhatsApp with a pre-filled message? <span class="plus">+</span></summary>
+          <p>Yes — hero CTA + sticky WhatsApp + package CTAs all open WhatsApp with a clean pre-filled enquiry message.</p>
+        </details>
+        <details>
+          <summary>Do you only build for real estate? <span class="plus">+</span></summary>
+          <p>No. We start with builders/developers, but we build for any SMB (clinic, salon, coaching, services, restaurants).</p>
+        </details>
+      </div>
+
+      <div class="card contact" id="contact">
+        <div class="bg" aria-hidden="true"></div>
+        <div class="contact-grid">
+          <div>
+            <div class="kicker">Contact</div>
+            <div class="h2" style="font-size:34px; margin-top:10px">Want a website that closes?</div>
+            <p class="sub" style="margin-top:10px">Message us on WhatsApp. We’ll share packages, timeline, and the best demo for your niche.</p>
+            <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+              <a class="btn gold" id="waContact" href="#">WhatsApp now</a>
+              <a class="btn" href="#demos">View demos</a>
+            </div>
+            <p class="note" style="margin-top:12px">Tip: This exact section can be reused for every client site.</p>
+          </div>
+
+          <form class="form" onsubmit="return fakeSubmit(event)">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" required placeholder="Your name" />
+            </div>
+            <div>
+              <label for="biz">Business</label>
+              <input id="biz" placeholder="Builder / Clinic / Salon / Other" />
+            </div>
+            <div>
+              <label for="req">Requirement</label>
+              <textarea id="req" placeholder="Location, pages needed, package, deadline..."></textarea>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap">
+              <button class="btn gold" type="submit">Send enquiry</button>
+              <a class="btn" href="#top">Back to top</a>
+            </div>
+            <div class="note" id="note"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wa" aria-label="WhatsApp enquiry">
+  <div class="bubble">Want packages + demo links? Tap WhatsApp.</div>
+  <a class="btn gold" id="waSticky" href="#"><span aria-hidden="true">🟢</span> WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div>© <span id="year"></span> UrbanWeb Digital</div>
+      <div class="footer-links">
+        <a href="#demos">Demos</a>
+        <a href="#packages">Packages</a>
+        <a href="project.html">Project template</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function fakeSubmit(e){
+    e.preventDefault();
+    document.getElementById("note").textContent = "Captured (demo). Connect this form to email/CRM when ready.";
+    return false;
+  }
+
+  const WA = {
+    phone: "919177418983",
+    brand: "UrbanWeb Digital",
+    source: "Website"
+  };
+
+  function waLink(text){ return `https://wa.me/${WA.phone}?text=${encodeURIComponent(text)}`; }
+
+  function baseMsg(extra="") {
+    return [
+      `Hi ${WA.brand},`,
+      `I want a premium website (fast delivery) for my business.`,
+      `Business type: (Builder/Clinic/Salon/Other)`,
+      `Location: (City/Area)`,
+      extra ? `Package: ${extra}` : `Package: (Launch/Growth/Pro)`,
+      `Please share packages + timeline + next steps.`,
+      `Source: ${WA.source}`
+    ].join("\n");
+  }
+
+  const base = waLink(baseMsg(""));
+  ["waTop","waHero","waDemos","waContact","waSticky"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el){ el.href = base; el.target = "_blank"; }
+  });
+
+  document.querySelectorAll(".packWA").forEach(btn=>{
+    const p = btn.getAttribute("data-pack") || "";
+    btn.href = waLink(baseMsg(p));
+    btn.target = "_blank";
+  });
+</script>
+</body>
+</html>

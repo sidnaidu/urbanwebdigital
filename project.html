@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Template — Skyline Residency</title>
+  <meta name="description" content="Premium real-estate project page template with amenities, plans, map, gallery, RERA, and construction updates."/>
+  <meta name="theme-color" content="#0c0c0f" />
+    <link rel="icon" type="image/png" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0c0c0f;
+  --bg2:#07070a;
+  --panel:rgba(255,255,255,.05);
+  --panel2:rgba(0,0,0,.30);
+  --line:rgba(255,255,255,.12);
+  --text:#f5f5f5;
+  --muted:rgba(255,255,255,.68);
+  --muted2:rgba(255,255,255,.52);
+  --gold:#c6a46c;
+  --goldSoft:#e2c79a;
+  --shadow: 0 30px 90px rgba(0,0,0,.55);
+  --shadow2: 0 18px 55px rgba(0,0,0,.40);
+  --r:18px;
+  --r2:26px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(900px 520px at 30% 10%, rgba(198,164,108,.14), transparent 60%),
+              radial-gradient(900px 520px at 70% 0%, rgba(255,255,255,.05), transparent 60%),
+              linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  color:var(--text);
+}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:14px 26px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(8px);
+  cursor:pointer;
+  transition:.25s ease;
+  white-space:nowrap;
+}
+.btn:hover{transform: translateY(-2px)}
+.btn.gold{
+  border-color:rgba(198,164,108,.42);
+  background: linear-gradient(135deg, rgba(198,164,108,.22), rgba(255,255,255,.05));
+}
+.pill{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(198,164,108,.26);
+  background: rgba(198,164,108,.10);
+  color: rgba(255,255,255,.78);
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.pill i{
+  width:6px;height:6px;border-radius:50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 7px rgba(198,164,108,.14);
+  display:inline-block;
+}
+.h-serif{
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  letter-spacing:-.02em;
+}
+.goldText{
+  background: linear-gradient(90deg, var(--goldSoft), var(--gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.card{
+  border-radius: var(--r2);
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.20);
+  box-shadow: var(--shadow2);
+}
+.section{padding:64px 0}
+.kicker{
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color: rgba(255,255,255,.62);
+}
+.h2{
+  margin:14px 0 0;
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  font-size: clamp(26px, 3vw, 40px);
+  letter-spacing:-.02em;
+}
+.sub{
+  margin:14px 0 0;
+  color: var(--muted);
+  line-height:1.8;
+  max-width: 70ch;
+}
+.grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+.grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+@media (max-width: 980px){
+  .grid3{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+}
+
+.nav{
+  position:sticky; top:0; z-index:60;
+  background: rgba(12,12,15,.70);
+  backdrop-filter: blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 0}
+.brand{display:flex; align-items:center; gap:12px}
+.brand-mark{
+  width:44px; height:44px;
+  border-radius:14px;
+  display:block;
+  object-fit:contain;
+  filter: drop-shadow(0 16px 32px rgba(198,164,108,.18));
+}
+.brand-text{
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color: rgba(255,255,255,.70);
+}
+.brand-accent{color: rgba(226,199,154,.92)}
+.links{
+  display:flex; gap:18px; align-items:center;
+  font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+  color: rgba(255,255,255,.58);
+}
+.links a{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid transparent;
+  transition:.2s ease;
+}
+.links a:hover{border-color: rgba(198,164,108,.20); background: rgba(198,164,108,.08); color: rgba(255,255,255,.82)}
+.links a.on{color: rgba(255,255,255,.86); border-color: rgba(198,164,108,.22); background: rgba(198,164,108,.08)}
+.nav-cta{display:flex; gap:12px; align-items:center}
+@media (max-width: 980px){
+  .links{display:none}
+  .nav-cta .btn{padding:12px 18px}
+}
+
+.hero2{
+  position:relative; padding:70px 0 34px;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero2 .bg{
+  position:absolute; inset:0; z-index:-2;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.70), rgba(0,0,0,.92)),
+    radial-gradient(circle at 60% 25%, rgba(198,164,108,.22), transparent 55%),
+    var(--heroImg, none);
+  background-size:cover;
+  background-position:center;
+  filter: brightness(.74) contrast(1.12);
+  transform: scale(1.03);
+}
+.breadcrumb{color: rgba(255,255,255,.58); font-size:12px; letter-spacing:.16em; text-transform:uppercase}
+.hero2 h1{
+  margin:14px 0 0;
+  font-family:"Playfair Display", serif;
+  font-weight:600;
+  letter-spacing:-.02em;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height:1.05;
+  max-width: 980px;
+}
+.hero2 p{margin:16px 0 0; color: rgba(255,255,255,.70); line-height:1.9; max-width: 78ch}
+.tabs{
+  margin-top:22px;
+  display:flex; gap:10px; flex-wrap:wrap;
+}
+.tab{
+  padding:10px 12px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.22);
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color: rgba(255,255,255,.72);
+  transition:.2s ease;
+}
+.tab:hover{border-color: rgba(198,164,108,.28); background: rgba(198,164,108,.10); color: rgba(255,255,255,.86)}
+.small-grid{display:grid; grid-template-columns: repeat(4, 1fr); gap:12px}
+@media (max-width: 980px){ .small-grid{grid-template-columns:1fr 1fr} }
+@media (max-width: 560px){ .small-grid{grid-template-columns:1fr} }
+.kpi{padding:14px}
+.kpi b{display:block; font-size:14px}
+.kpi span{display:block; margin-top:8px; color: rgba(255,255,255,.62); font-size:12px; line-height:1.6}
+hr.sep{border:none; border-top:1px solid rgba(255,255,255,.08); margin:0}
+.gallery{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:18px}
+.gallery img{width:100%; height:240px; object-fit:cover; border-radius: 18px; border:1px solid rgba(255,255,255,.10); cursor:pointer; filter: contrast(1.06) saturate(1.03)}
+@media (max-width: 980px){ .gallery{grid-template-columns:1fr} .gallery img{height:220px}}
+.modal{
+  position:fixed; inset:0; z-index:200;
+  display:none; place-items:center;
+  background: rgba(0,0,0,.78);
+  backdrop-filter: blur(10px);
+}
+.modal.on{display:grid}
+.modal img{max-width:min(1100px, 92vw); max-height:82vh; border-radius: 20px; border:1px solid rgba(255,255,255,.16)}
+.modal .x{
+  position:fixed; top:16px; right:16px;
+  width:44px;height:44px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.16);
+  background: rgba(0,0,0,.35);
+  display:grid; place-items:center;
+  cursor:pointer;
+  color: rgba(255,255,255,.82);
+}
+.mapbox{
+  border-radius: 26px;
+  border:1px solid rgba(255,255,255,.10);
+  overflow:hidden;
+  background: rgba(0,0,0,.22);
+  box-shadow: var(--shadow2);
+}
+.mapbox iframe{width:100%; height:380px; border:0; filter: grayscale(1) contrast(1.12) brightness(.92)}
+@media (max-width: 980px){ .mapbox iframe{height:320px}}
+.timeline{display:grid; gap:12px; margin-top:18px}
+.step{padding:16px}
+.step b{display:block; font-size:14px}
+.step span{display:block; margin-top:8px; color: rgba(255,255,255,.68); line-height:1.7}
+</style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="UrbanWeb Digital">
+        <img class="brand-mark" src="assets/img/logo-mark.png" alt="UrbanWeb Digital logo">
+        <span class="brand-text">URBANWEB <span class="brand-accent">DIGITAL</span></span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a class="" href="index.html#top">Home</a>
+        <a class="on" href="index.html#demos">Demos</a>
+        <a class="" href="index.html#packages">Packages</a>
+        <a class="" href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn" href="index.html#demos">View demos</a>
+        <a class="btn gold" id="waTop" href="#">WhatsApp quote</a>
+      </div>
+    </div>
+  </div>
+
+<header class="hero2" style="--heroImg:url('assets/img/project-hero.jpg');">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="breadcrumb">Demo • Real Estate Project Page</div>
+    <h1>Skyline Residency <span class="goldText">— Premium Living</span></h1>
+    <p>Use this as a template for any builder/developer: clear details, strong trust signals, and WhatsApp-first CTAs to convert enquiries.</p>
+    <div class="tabs">
+      <a class="tab" href="#amenities">Amenities</a>
+      <a class="tab" href="#plans">Plans</a>
+      <a class="tab" href="#location">Location Map</a>
+      <a class="tab" href="#gallery">Gallery</a>
+      <a class="tab" href="#rera">RERA/Approvals</a>
+      <a class="tab" href="#updates">Construction Updates</a>
+      <a class="tab" id="waProjectTop" href="#">WhatsApp</a>
+    </div>
+
+    <div style="margin-top:22px" class="small-grid">
+      <div class="card kpi"><b>Configuration</b><span>2 & 3 BHK • 114 Units</span></div>
+      <div class="card kpi"><b>Location</b><span>Kondapur, Hyderabad</span></div>
+      <div class="card kpi"><b>Possession</b><span>Dec 2026 (Phase 1)</span></div>
+      <div class="card kpi"><b>Price Range</b><span>From ₹1.08 Cr*</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="amenities">
+  <div class="wrap">
+    <div class="kicker">Amenities</div>
+    <div class="h2">Everything that sells premium.</div>
+    <p class="sub">Keep amenities crisp and scannable. Buyers should understand value in 10 seconds.</p>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card pack">
+        <div class="kicker">Lifestyle</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>Clubhouse & co-working lounge</li>
+          <li><span class="tick">✓</span>Infinity-edge pool</li>
+          <li><span class="tick">✓</span>Indoor games & café corner</li>
+          <li><span class="tick">✓</span>Multipurpose hall</li>
+        </ul>
+      </div>
+      <div class="card pack">
+        <div class="kicker">Fitness</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>Gym + yoga deck</li>
+          <li><span class="tick">✓</span>Jogging track</li>
+          <li><span class="tick">✓</span>Sports courts</li>
+          <li><span class="tick">✓</span>Kids play zone</li>
+        </ul>
+      </div>
+      <div class="card pack featured">
+        <div class="kicker">Safety</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>24×7 security & CCTV</li>
+          <li><span class="tick">✓</span>Access-controlled entry</li>
+          <li><span class="tick">✓</span>Fire safety compliance</li>
+          <li><span class="tick">✓</span>Power backup for common areas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn gold" id="waAmenities" href="#">Get brochure on WhatsApp</a>
+      <a class="btn" href="#plans">View plans</a>
+    </div>
+  </div>
+</section>
+
+<hr class="sep"/>
+
+<section class="section" id="plans">
+  <div class="wrap">
+    <div class="kicker">Plans</div>
+    <div class="h2">Plans that close faster.</div>
+    <p class="sub">Use clean plan cards. If you have PDFs, we add “Download plan” buttons too.</p>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card pack">
+        <div class="kicker">2 BHK</div>
+        <h3>1250–1380 sft</h3>
+        <ul class="list">
+          <li><span class="tick">✓</span>2 Bedrooms + 2 Baths</li>
+          <li><span class="tick">✓</span>Balcony</li>
+          <li><span class="tick">✓</span>Utility area</li>
+        </ul>
+        <div class="cta"><a class="btn gold" id="waPlan2" href="#">Get 2BHK plan</a></div>
+      </div>
+      <div class="card pack featured">
+        <div class="kicker">3 BHK</div>
+        <h3>1640–1890 sft</h3>
+        <ul class="list">
+          <li><span class="tick">✓</span>3 Bedrooms + 3 Baths</li>
+          <li><span class="tick">✓</span>Balcony + deck</li>
+          <li><span class="tick">✓</span>Premium kitchen layout</li>
+        </ul>
+        <div class="cta"><a class="btn gold" id="waPlan3" href="#">Get 3BHK plan</a></div>
+      </div>
+      <div class="card pack">
+        <div class="kicker">Master Plan</div>
+        <h3>Tower layout</h3>
+        <ul class="list">
+          <li><span class="tick">✓</span>Open space & greens</li>
+          <li><span class="tick">✓</span>Vehicle circulation</li>
+          <li><span class="tick">✓</span>Clubhouse placement</li>
+        </ul>
+        <div class="cta"><a class="btn gold" id="waMaster" href="#">Get master plan</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="sep"/>
+
+<section class="section" id="location">
+  <div class="wrap">
+    <div class="kicker">Location</div>
+    <div class="h2">Location map</div>
+    <p class="sub">Embed Google Maps here. For a real project, we’ll use your exact pin + nearby landmarks.</p>
+
+    <div class="mapbox" style="margin-top:18px">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.430621236205!2d78.381819!3d17.468642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI4JzA3LjEiTiA3OMKwMjMnMDUuMCJF!5e0!3m2!1sen!2sin!4v1730000000000">
+      </iframe>
+    </div>
+
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn gold" id="waLocation" href="#">Share location + site visit</a>
+      <a class="btn" href="#gallery">View gallery</a>
+    </div>
+  </div>
+</section>
+
+<hr class="sep"/>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="kicker">Gallery</div>
+    <div class="h2">Premium visuals</div>
+    <p class="sub">Click any image to open lightbox.</p>
+
+    <div class="gallery">
+      <img src="assets/img/gallery-01.jpg" alt="Gallery 1" onclick="openImg(this.src)"/>
+      <img src="assets/img/gallery-02.jpg" alt="Gallery 2" onclick="openImg(this.src)"/>
+      <img src="assets/img/gallery-03.jpg" alt="Gallery 3" onclick="openImg(this.src)"/>
+      <img src="assets/img/gallery-04.jpg" alt="Gallery 4" onclick="openImg(this.src)"/>
+      <img src="assets/img/gallery-05.jpg" alt="Gallery 5" onclick="openImg(this.src)"/>
+      <img src="assets/img/gallery-06.jpg" alt="Gallery 6" onclick="openImg(this.src)"/>
+    </div>
+
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn gold" id="waGallery" href="#">Get full gallery on WhatsApp</a>
+      <a class="btn" href="#rera">RERA details</a>
+    </div>
+  </div>
+
+  <div class="modal" id="modal" onclick="closeImg()">
+    <div class="x" onclick="closeImg()">✕</div>
+    <img id="modalImg" alt="Expanded"/>
+  </div>
+</section>
+
+<hr class="sep"/>
+
+<section class="section" id="rera">
+  <div class="wrap">
+    <div class="kicker">Trust</div>
+    <div class="h2">RERA & approvals</div>
+    <p class="sub">These details increase trust immediately. We can format your exact approvals cleanly.</p>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card pack">
+        <div class="kicker">RERA</div>
+        <h3>TS-RERA-XXXX</h3>
+        <p class="sub" style="margin-top:10px">Registration valid for Phase 1.</p>
+      </div>
+      <div class="card pack featured">
+        <div class="kicker">Approvals</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>HMDA / GHMC approval</li>
+          <li><span class="tick">✓</span>Fire NOC</li>
+          <li><span class="tick">✓</span>Environmental clearance</li>
+        </ul>
+      </div>
+      <div class="card pack">
+        <div class="kicker">Banks</div>
+        <ul class="list">
+          <li><span class="tick">✓</span>HDFC</li>
+          <li><span class="tick">✓</span>SBI</li>
+          <li><span class="tick">✓</span>ICICI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn gold" id="waRera" href="#">Send approvals on WhatsApp</a>
+      <a class="btn" href="#updates">Construction updates</a>
+    </div>
+  </div>
+</section>
+
+<hr class="sep"/>
+
+<section class="section" id="updates">
+  <div class="wrap">
+    <div class="kicker">Updates</div>
+    <div class="h2">Construction progress</div>
+    <p class="sub">Simple timeline updates keep leads warm and reduce follow-up friction.</p>
+
+    <div class="timeline">
+      <div class="card step"><b>Feb 2026 — Structure complete</b><span>Tower A & B structure completed. Brickwork in progress.</span></div>
+      <div class="card step"><b>May 2026 — Flooring & electrical</b><span>Internal electrical, plumbing and flooring work starts for mid floors.</span></div>
+      <div class="card step"><b>Aug 2026 — Amenities zone</b><span>Clubhouse civil work begins. Landscape development scheduled.</span></div>
+      <div class="card step"><b>Dec 2026 — Handover (Phase 1)</b><span>Finishing, QC checks and phased handover process.</span></div>
+    </div>
+
+    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn gold" id="waUpdates" href="#">Book a site visit</a>
+      <a class="btn" href="index.html#packages">UrbanWeb packages</a>
+    </div>
+  </div>
+</section>
+
+<div class="wa" aria-label="WhatsApp enquiry">
+  <div class="bubble">Want brochure + price + site visit? Tap WhatsApp.</div>
+  <a class="btn gold" id="waSticky" href="#"><span aria-hidden="true">🟢</span> WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div>© <span id="year"></span> UrbanWeb Digital</div>
+      <div class="footer-links">
+        <a href="index.html#demos">Back to demos</a>
+        <a href="index.html#packages">Packages</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  function openImg(src){ modal.classList.add("on"); modalImg.src = src; }
+  function closeImg(){ modal.classList.remove("on"); }
+
+  const WA = {
+    phone: "919177418983",
+    brand: "UrbanWeb Digital",
+    source: "Project Page Demo"
+  };
+  function waLink(text){ return `https://wa.me/${WA.phone}?text=${encodeURIComponent(text)}`; }
+  function msg(extra="") {
+    return [
+      `Hi ${WA.brand},`,
+      `I’m interested in Skyline Residency.`,
+      extra || `Please share brochure + price range + availability.`,
+      `Preferred visit: (Today/This weekend/Other)`,
+      `Source: ${WA.source}`
+    ].join("\n");
+  }
+  const base = waLink(msg(""));
+  ["waTop","waProjectTop","waAmenities","waPlan2","waPlan3","waMaster","waLocation","waGallery","waRera","waUpdates","waSticky"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el){ el.href = base; el.target = "_blank"; }
+  });
+</script>
+</body>
+</html>
