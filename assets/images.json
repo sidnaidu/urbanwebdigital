@@ -1,0 +1,54 @@
+[
+  {
+    "filename": "assets/img/hero-bg.jpg",
+    "url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/demo-realestate.jpg",
+    "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/demo-salon.jpg",
+    "url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/demo-clinic.jpg",
+    "url": "https://images.unsplash.com/photo-1580281657527-47f249e8f40e?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/demo-coaching.jpg",
+    "url": "https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/texture-01.jpg",
+    "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/project-hero.jpg",
+    "url": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=2200&q=80"
+  },
+  {
+    "filename": "assets/img/gallery-01.jpg",
+    "url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=2000&q=80"
+  },
+  {
+    "filename": "assets/img/gallery-02.jpg",
+    "url": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2000&q=80"
+  },
+  {
+    "filename": "assets/img/gallery-03.jpg",
+    "url": "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=2000&q=80"
+  },
+  {
+    "filename": "assets/img/gallery-04.jpg",
+    "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=2000&q=80"
+  },
+  {
+    "filename": "assets/img/gallery-05.jpg",
+    "url": "https://images.unsplash.com/photo-1505691723518-36a5ac3b2b18?auto=format&fit=crop&w=2000&q=80"
+  },
+  {
+    "filename": "assets/img/gallery-06.jpg",
+    "url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=80"
+  }
+]
