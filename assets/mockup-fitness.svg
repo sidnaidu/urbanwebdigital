@@ -1,0 +1,24 @@
+<svg width="860" height="620" viewBox="0 0 860 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="860" height="620" rx="28" fill="#101E18"/>
+  <rect x="32" y="32" width="796" height="556" rx="24" fill="#0C1512" stroke="#24352F"/>
+  <rect x="62" y="62" width="736" height="174" rx="24" fill="#17352B"/>
+  <rect x="92" y="90" width="136" height="12" rx="6" fill="#BFE7CC"/>
+  <rect x="92" y="120" width="326" height="54" rx="18" fill="#F3FBF5"/>
+  <rect x="92" y="192" width="172" height="30" rx="15" fill="#9DD7B2"/>
+  <rect x="62" y="270" width="290" height="288" rx="22" fill="#17392E"/>
+  <rect x="382" y="270" width="416" height="132" rx="22" fill="#17392E"/>
+  <rect x="382" y="426" width="196" height="132" rx="22" fill="#17392E"/>
+  <rect x="602" y="426" width="196" height="132" rx="22" fill="#17392E"/>
+  <rect x="90" y="298" width="234" height="154" rx="18" fill="url(#fitness)"/>
+  <rect x="410" y="296" width="198" height="16" rx="8" fill="#E7F8EB"/>
+  <rect x="410" y="326" width="320" height="22" rx="11" fill="#F1FBF3"/>
+  <rect x="410" y="364" width="220" height="14" rx="7" fill="#9FC1AF"/>
+  <rect x="410" y="504" width="138" height="14" rx="7" fill="#F1FBF3"/>
+  <rect x="630" y="504" width="138" height="14" rx="7" fill="#F1FBF3"/>
+  <defs>
+    <linearGradient id="fitness" x1="90" y1="298" x2="324" y2="452" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CEEED8"/>
+      <stop offset="1" stop-color="#567E6B"/>
+    </linearGradient>
+  </defs>
+</svg>
